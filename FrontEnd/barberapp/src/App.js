@@ -1,8 +1,13 @@
 import './App.css';
+import  Header  from './components/header/header';
+import HeroSlider from './components/hero-slider/heroSlider';
 
 function App() {
   return (
-    <h2>BarberApp.</h2>
+    <>
+      <Header />
+      <HeroSlider />
+    </>
   )
 }
 
