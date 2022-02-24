@@ -4,6 +4,7 @@ import Login from './components/form/login';
 import Register from './components/form/register';
 import Home from './screens/home';
 import Header from './components/header/header';
+import Date from './screens/Date';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/Home" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registro" element={<Register />} />
+          <Route path="/Date" element={<Date/>} />
           
         </Routes>
       </BrowserRouter>
