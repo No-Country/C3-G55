@@ -6,7 +6,7 @@ export const HeroSliderStyled = styled.div`
   margin: 0 auto;
   background-color: black;
   img {
-    height: 89.8vh;
+    height: 85vh;
     width: 100vw;
   }
 `;

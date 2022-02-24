@@ -2,7 +2,14 @@ import React from "react";
 import { HeaderStyled, NavStyled } from "./headerStyled";
 
 const Header = () => {
-  const options = ["Barberos", "Cortes", "Reservas", "Contacto"];
+  const options = [
+    "Barberos",
+    "Servicios",
+    "Reservas",
+    "Contacto",
+    "Login",
+    "Registro",
+  ];
 
   return (
     <HeaderStyled>
