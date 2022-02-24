@@ -26,7 +26,7 @@ export const StyledForm = styled.div`
   }
 `;
 export const StyledButton = styled.button`
-  position: absolute;
+  
   bottom: 0;
   width: 100%;
   padding: 1rem;
