@@ -1,5 +1,6 @@
 import React from "react";
-import { HeaderStyled, NavStyled } from "./headerStyled";
+import { Container } from "../barberos/barberosSyled";
+import { HeaderStyled, ImagenStyled, LinkStyled, NavStyled, SectionStyled } from "./headerStyled";
 
 const Header = () => {
   const options = [
@@ -10,18 +11,21 @@ const Header = () => {
     "Login",
     "Registro",
   ];
-
   return (
-    <HeaderStyled>
-      <div>Logo</div>
-      <NavStyled>
-        {React.Children.toArray(
-          options?.map((elem) => {
-            return <p>{elem} </p>;
-          })
-        )}
-      </NavStyled>
-    </HeaderStyled>
+      <HeaderStyled>
+            <div>
+            <ImagenStyled img src="../../assets/poste-de-barberia.png" alt="Logo Barberia"></ImagenStyled>
+            </div> 
+            <div>
+              <NavStyled>
+                    {React.Children.toArray(
+                      options?.map((elem) => {
+                    return <LinkStyled a>{elem}</LinkStyled>;
+                      })
+                    )}
+              </NavStyled>
+            </div> 
+      </HeaderStyled>
   );
 };
 export default Header;

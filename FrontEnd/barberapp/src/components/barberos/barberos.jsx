@@ -31,7 +31,7 @@ const Barberos = () => {
   ];
 
   return (
-    <Container>
+    <Container id="barberos">
       <h2>Barberos</h2>
       <WrappedBarbers>
         {React.Children.toArray(
