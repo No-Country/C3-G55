@@ -1,6 +1,11 @@
 import React from "react";
 import { useFormik } from "formik";
-import { StyledButton, StyledContainerForm, StyledForm } from "./formStyled";
+import {
+  StyledButton,
+  StyledContainerForm,
+  StyledErrors,
+  StyledForm,
+} from "./formStyled";
 import * as Yup from "yup";
 
 import { useDispatch } from "react-redux";
@@ -37,8 +42,7 @@ const Register = () => {
       <form
         onSubmit={formik.handleSubmit}
         style={{
-          width: "30%",
-          height: "450px",
+          width: "500px",
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
@@ -57,9 +61,9 @@ const Register = () => {
           REGISTRO
         </h2>
         {formik.touched.name && formik.errors.name ? (
-          <div>
+          <StyledErrors>
             <h4>Error! {formik.errors.name} </h4>
-          </div>
+          </StyledErrors>
         ) : null}
         <StyledForm>
           <label htmlFor="name">Name</label>
@@ -76,9 +80,9 @@ const Register = () => {
           />
         </StyledForm>
         {formik.touched.email && formik.errors.email ? (
-          <div>
+          <StyledErrors>
             <h4>Error!{formik.errors.email} </h4>
-          </div>
+          </StyledErrors>
         ) : null}
         <StyledForm>
           <label htmlFor="email"> Email</label>
@@ -96,14 +100,14 @@ const Register = () => {
         </StyledForm>
 
         {formik.touched.number && formik.errors.number ? (
-          <div>
+          <StyledErrors>
             <h4>Error!{formik.errors.number}</h4>
-          </div>
+          </StyledErrors>
         ) : null}
         <StyledForm>
           <label htmlFor="number"> telefono</label>
           <input
-            type="number"
+            type="phone"
             name="number"
             id="number"
             placeholder="number"
@@ -115,9 +119,9 @@ const Register = () => {
         </StyledForm>
 
         {formik.touched.password && formik.errors.password ? (
-          <div>
+          <StyledErrors>
             <h4>Error!{formik.errors.password}</h4>
-          </div>
+          </StyledErrors>
         ) : null}
         <StyledForm>
           <label htmlFor="password"> Password</label>

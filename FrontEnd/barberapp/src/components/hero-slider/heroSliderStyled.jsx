@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const HeroSliderStyled = styled.div`
-  max-height: 85vh;
+  max-height: 100vh;
   max-width: 100vw;
   margin: 0 auto;
   background-color: black;
   img {
-    height: 85vh;
+    height: 100vh;
     width: 100vw;
   }
 `;

@@ -32,7 +32,16 @@ const Barberos = () => {
 
   return (
     <Container id="barberos">
-      <h2>Barberos</h2>
+      <h2
+        style={{
+          fontSize: "3rem",
+          textAlign: "center",
+          letterSpacing: "2px",
+          paddingTop: "5rem",
+        }}
+      >
+        BARBEROS
+      </h2>
       <WrappedBarbers>
         {React.Children.toArray(
           barberos.map((barber) => {
