@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledContainerForm = styled.div`
+export const StyledContainerForm = styled.div` 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,8 @@ export const StyledContainerForm = styled.div`
 `;
 
 export const StyledForm = styled.div`
-  display: flex;
+background-color: black;  
+display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -18,9 +19,11 @@ export const StyledForm = styled.div`
   label {
     width: 100px;
     padding: 1rem;
-    text-align: left;
+    text-align: center;
   }
   input {
+    display: flex;
+    align-items: center;
     width: 250px;
     padding: 1rem;
   }
@@ -28,18 +31,20 @@ export const StyledForm = styled.div`
 export const StyledButton = styled.button`
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
-  margin: auto;
-  background-color: darksalmon;
+  margin: 0;
+  background: black;
   border: none;
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
+  transform: .2s easy-out;
   &:hover {
     cursor: pointer;
+    background: linear-gradient(to right, #FFBD00, #FF1F00);
   }
 `;
 export const StyledErrors = styled.div`
+  text-align: center;
   padding: 0;
   margin: 0;
   color: red;

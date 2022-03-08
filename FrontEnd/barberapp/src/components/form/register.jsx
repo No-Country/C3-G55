@@ -47,14 +47,15 @@ const Register = () => {
           alignItems: "center",
           flexDirection: "column",
           margin: "auto",
-          backgroundColor: "steelblue",
+          backgroundColor: "black",
           position: "relative",
+          color: "#fff"
         }}
       >
         <h2
           style={{
             paddingTop: "1rem",
-            color: "black",
+            color: "#fff",
             letterSpacing: "3px",
           }}
         >

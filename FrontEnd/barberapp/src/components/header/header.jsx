@@ -10,7 +10,7 @@ export default function Header(){
             <a href="#inicio"><img class="logo" src={logo} /></a>
         <nav className="nav-bar">
             <div class="link"><a  href="#barberos">Barberos</a></div>
-            <div class="link"><a  href="#cortes">Cortes</a></div>
+            <div class="link"><a  href="#horarios">Horarios</a></div>
             <div class="link"><a  href="#reserva">Reserva</a></div>
             <div class="link"><a  href="#contacto">Contacto</a></div>
             <div class="link"><a  href="#registro">Registro</a></div>

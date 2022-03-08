@@ -14,23 +14,29 @@ const Footer = () => {
           <p>Domingos: cerrados </p>
         </div>
       </div>
-      <div id="contactanos">
+      <div id="contacto">
         <div className="title">
-          <h2>Contáctanos</h2>
+          <h2>Contacto</h2>
         </div>
         <div id="data">
+          <div id="text">
+          <img class="img-text"src="https://i.imgur.com/lveMlkd.png" alt="mail" />
           <p>
-            <img src="https://i.imgur.com/lveMlkd.png" alt="mail" />{" "}
             info@barberos.com.ar
           </p>
+          </div>
+          <div id="text">
+          <img class="img-text"src="https://i.imgur.com/MP5Y3sJ.png" alt="telefono" />
           <p>
-            <img src="https://i.imgur.com/MP5Y3sJ.png" alt="telefono" />
             +5491163083418
           </p>
+          </div>
+          <div id="text">
+          <img class="img-text" src="https://i.imgur.com/sTmxuub.png" alt="ubicacion" />
           <p>
-            <img src="https://i.imgur.com/sTmxuub.png" alt="ubicacion" />
             Av. Federico Lacroze ###
           </p>
+          </div>
         </div>
         <div id="redes">
           <div className="title">

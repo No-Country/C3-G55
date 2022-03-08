@@ -30,9 +30,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 }
-a:hover {
-  color: hotPink;
-}
+
 @media (-webkit-min-device-pixel-ratio:0) {
   a {
     background-color: #fff;
@@ -61,20 +59,42 @@ h2{
   margin-top: 1rem;
 }
 
-#img-barberos{
-    background-color: #fff;
-    background: -webkit-linear-gradient(-45deg, #FFBD00 0%, #FF1F00 50%, transparent 50%);
-    background: -moz-linear-gradient(-45deg, #FFBD00 0%, #FF1F00 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 300% 300%;
-    color: transparent;
-    -webkit-transition: .3s .1s;
-    
+button{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: .5rem;
+  padding-top: 4rem;
+  margin-top: 2rem;
 }
-#img-barberos:hover{
-  background-position: 0 0;
-    color: transparent;
-    transition: .4s 0;
-    z-index: 1;
-		mix-blend-mode: screen;
+
+#horario-data{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#data{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+#text{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.img-text{
+  max-width: 100%;
+}
+.title h2{
+  padding-top: 3rem;
+  margin-top: 0;
+}
+
+#logos{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
 }
