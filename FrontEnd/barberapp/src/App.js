@@ -5,22 +5,25 @@ import Register from './components/form/register';
 import Home from './screens/home';
 import Header from './components/header/header';
 import Date from './screens/Date';
+import Footer from './components/footer/footer';
+
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header />        
         <Routes>
-          <Route exact path="/Home" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registro" element={<Register />} />
-          <Route path="/Date" element={<Date/>} />
-          
-        </Routes>
+          <Route path="/Date" element={<Date/>} />          
+        </Routes>     
+
       </BrowserRouter>
       
-      <Home />
+      <Footer />
     </>
   )
 }
