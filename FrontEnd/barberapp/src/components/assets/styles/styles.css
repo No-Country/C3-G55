@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 590px){
+  .nav-container{
+    flex-direction: column;
+  }
+}
 
 .logo {
   display: flex;
@@ -22,6 +27,13 @@
   margin-right: 2rem;
   font-size: 1.5rem;
   gap: 1rem;
+}
+@media (max-width: 560px){
+  .nav-bar{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 a {
@@ -97,4 +109,8 @@ button{
   display: flex;
   justify-content: space-around;
   margin-bottom: 3rem;
+}
+
+#ubicacion img{
+  max-width: 100%;
 }
