@@ -32,21 +32,14 @@ const Barberos = () => {
 
   return (
     <Container id="barberos">
-      <h2
-        style={{
-          fontSize: "3rem",
-          textAlign: "center",
-          letterSpacing: "2px",
-          paddingTop: "5rem",
-        }}
-      >
+      <h2>
         BARBEROS
       </h2>
       <WrappedBarbers>
         {React.Children.toArray(
           barberos.map((barber) => {
             return (
-              <CardContainer>
+              <CardContainer id="img-barberos">
                 <img src={barber.foto} alt={barber.nombre} />
                 <InfoContainer>
                   <p>{barber.nombre.toLocaleUpperCase()} </p>

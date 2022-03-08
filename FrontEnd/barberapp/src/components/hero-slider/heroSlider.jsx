@@ -21,7 +21,7 @@ const HeroSlider = () => {
     "../../assets/barba.jpg",
   ];
   return (
-    <HeroSliderStyled>
+    <HeroSliderStyled id="inicio">
       <Slider {...settings}>
         {React.Children.toArray(
           info?.map((item, index) => {

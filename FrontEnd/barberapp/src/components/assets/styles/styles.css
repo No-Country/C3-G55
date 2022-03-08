@@ -1,0 +1,80 @@
+
+.nav-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  max-width: 100%;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+.nav-bar {
+  display: flex;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  gap: 1rem;
+}
+
+a {
+  color: #fff;
+  font: bold 1.5rem 'Bebas Neue', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: hotPink;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+  a {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(left, #FFBD00 0%, #FF1F00 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300% 300%;
+    color: transparent;
+    -webkit-transition: .3s .1s;
+    -webkit-background-clip: text;
+  }
+  a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+
+/*SECTION BARBEROS*/
+
+h2{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: .2rem;
+  padding-top: 4rem;
+  margin-top: 1rem;
+}
+
+#img-barberos{
+    background-color: #fff;
+    background: -webkit-linear-gradient(-45deg, #FFBD00 0%, #FF1F00 50%, transparent 50%);
+    background: -moz-linear-gradient(-45deg, #FFBD00 0%, #FF1F00 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300% 300%;
+    color: transparent;
+    -webkit-transition: .3s .1s;
+    
+}
+#img-barberos:hover{
+  background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+    z-index: 1;
+		mix-blend-mode: screen;
+}

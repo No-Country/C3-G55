@@ -1,46 +1,23 @@
 import React from "react";
-import { Container } from "../barberos/barberosSyled";
-import { Link } from "react-router-dom";
-import {
-  HeaderStyled,
-  ImagenStyled,
-  LinkStyled,
-  NavStyled,
-  SectionStyled,
-} from "./headerStyled";
+import "../assets/styles/styles.css"
+import logo from "../assets/images/poste-de-barberia.png"
 
-const Header = () => {
-  const options = [
-    { name: "Barberos", to: "/barberos" },
-    { name: "Servicios", to: "/servicios" },
-    { name: "Reservas", to: "/reservas" },
-    { name: "Contacto", to: "/contacto" },
-    { name: "Login", to: "/login" },
-    { name: "Registro", to: "registro" },
-  ];
+
+export default function Header(){
+
   return (
-    <HeaderStyled>
-      <div>
-        <ImagenStyled
-          img
-          src="../../assets/poste-de-barberia.png"
-          alt="Logo Barberia"
-        ></ImagenStyled>
+      <div className="nav-container">
+            <a href="#inicio"><img class="logo" src={logo} /></a>
+        <nav className="nav-bar">
+            <div class="link"><a  href="#barberos">Barberos</a></div>
+            <div class="link"><a  href="#cortes">Cortes</a></div>
+            <div class="link"><a  href="#reserva">Reserva</a></div>
+            <div class="link"><a  href="#contacto">Contacto</a></div>
+            <div class="link"><a  href="#registro">Registro</a></div>
+            <div class="link"><a  href="#login">Login</a></div>
+            
+        </nav>    
       </div>
-      <div>
-        <NavStyled>
-          {React.Children.toArray(
-            options?.map((elem) => {
-              return (
-                <Link to={elem.to}>
-                  <LinkStyled a>{elem.name}</LinkStyled>
-                </Link>
-              );
-            })
-          )}
-        </NavStyled>
-      </div>
-    </HeaderStyled>
+  
   );
-};
-export default Header;
+}

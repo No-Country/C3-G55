@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HeaderStyled = styled.header`
   display: flex;
@@ -22,44 +23,48 @@ export const NavStyled = styled.nav`
   gap: 1rem;
   color: #fff;
 `;
-export const LinkStyled = styled.a`
-  text-decoration: none;
-  transition: all 450ms ease; 
-  cursor: pointer;
-  z-index: 0;
-    &::before,
-    &::after{
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        height: 0.1em;
-        width: 0;
-    }
 
+export const StyledLink = styled(Link)`
+color: #fff;
+text-decoration: none;
+transition: all 450ms ease; 
+cursor: pointer;
+z-index: 0;
+  
+&::before,
+&::after{
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 0.1em;
+    width: 0;
+}
+
+&::before{
+    left: 0;
+    z-index: -1;
+}
+
+&::after{
+    background-color: orange;
+    right: 0;
+}
+
+&:hover{
+    color: orange;
+    
     &::before{
-        left: 0;
-        z-index: -1;
+        width: 100%;
+        transition: width 250ms ease;
+        background-color: orange;
     }
 
     &::after{
-        background-color: orange;
-        right: 0;
+        width: 100%;
+        background-color: transparent;
     }
-
-    &:hover{
-        color: orange;
-        
-        &::before{
-            width: 100%;
-            transition: width 250ms ease;
-            background-color: orange;
-        }
-
-        &::after{
-            width: 100%;
-            background-color: transparent;
-        }
-    }
+    
+}
 `
 export const ImagenStyled = styled.img`
 margin: .3rem 0 0 1rem;
