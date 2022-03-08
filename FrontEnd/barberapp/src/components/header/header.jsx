@@ -31,11 +31,7 @@ const Header = () => {
         <NavStyled>
           {React.Children.toArray(
             options?.map((elem) => {
-              return (
-                <Link to={elem.to}>
-                  <LinkStyled a>{elem.name}</LinkStyled>
-                </Link>
-              );
+              return <Link to={elem.to}>{elem.name}</Link>;
             })
           )}
         </NavStyled>
