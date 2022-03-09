@@ -50,7 +50,7 @@ const Footer = () => {
             <p>/tubarberia</p>
             </div>
             <div class="img-text">
-            <img src="https://i.imgur.com/IAh8kT0.png" alt="twitter" />
+            <img src="https://i.imgur.com/ZOqaOnE.png" alt="twitter" />
             <p>@tubarberia</p>
             </div>
             <div class="img-text">
