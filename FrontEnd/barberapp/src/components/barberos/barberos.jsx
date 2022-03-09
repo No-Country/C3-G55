@@ -32,9 +32,11 @@ const Barberos = () => {
 
   return (
     <Container id="barberos">
-      <h2>
-        BARBEROS
-      </h2>
+      <h2>BARBEROS</h2>
+      <h3>
+        Nuestros barberos son hábiles tanto en las técnicas tradicionales de
+        corte y barba como el uso de toallas calientes en el afeitado
+      </h3>
       <WrappedBarbers>
         {React.Children.toArray(
           barberos.map((barber) => {
