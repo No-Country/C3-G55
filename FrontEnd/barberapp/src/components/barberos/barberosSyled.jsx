@@ -16,6 +16,18 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  img {
+    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+    filter: grayscale(100%);
+    filter: gray;
+  }
+  img:hover {
+    -webkit-filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: gray;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -24,7 +36,7 @@ export const InfoContainer = styled.div`
   background-repeat: none;
   background-size: cover;
   padding: 1rem 2rem;
-  margin-top: -40px;
+  margin-top: -35px;
   p {
     color: #fff;
     font-weight: bold;

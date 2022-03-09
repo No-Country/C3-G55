@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { HeroImg, HeroSliderStyled } from "./heroSliderStyled";
 import "./heroSlider.css";
+import TextHero from "./textHero";
 
 const HeroSlider = () => {
   const settings = {
@@ -21,7 +22,7 @@ const HeroSlider = () => {
     "../../assets/barba.jpg",
   ];
   return (
-    <HeroSliderStyled id="inicio">
+    <HeroSliderStyled id="inicio" style={{ position: "relative" }}>
       <Slider {...settings}>
         {React.Children.toArray(
           info?.map((item, index) => {
@@ -29,6 +30,7 @@ const HeroSlider = () => {
           })
         )}
       </Slider>
+      <TextHero />
     </HeroSliderStyled>
   );
 };
