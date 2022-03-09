@@ -1,17 +1,17 @@
 
 .nav-container {
+  display: flex;
+  flex-direction: row;
   background-color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
   width: 100%;
   position: fixed;
   z-index: 1;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-@media (max-width: 590px){
+@media (min-width: 768px){
   .nav-container{
-    flex-direction: column;
+  justify-content: space-between;
   }
 }
 
@@ -24,15 +24,16 @@
 
 .nav-bar {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px){
+  .nav-bar{
+  flex-direction: row;
   margin-right: 2rem;
   font-size: 1.5rem;
   gap: 1rem;
-}
-@media (max-width: 560px){
-  .nav-bar{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -90,30 +91,73 @@ button{
   text-align: center;
   font-size: 1.2rem;
 }
+.Horarios h2{
+  margin-top: 0;
+}
 
-#data{
+#contacto{
   display: flex;
   flex-direction: column;
-  text-align: center;
-  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px){
+  #contacto{
+    align-items: unset;
+  }
 }
 #text{
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
 }
-.img-text{
-  max-width: 100%;
+@media (min-width: 768px){
+  #text{
+  flex-direction: row;
+  }
 }
 .title h2{
   padding-top: 3rem;
   margin-top: 0;
 }
 
-#logos{
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 3rem;
+#footer{
+  padding: 5rem;
+}
+@media (min-width: 768px){
+  #footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center ;
+  }
 }
 
+#redes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px){
+  #redes{
+   align-items: unset; 
+  }
+}
+#logos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: .5rem;
+}
+.img-text{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.img-text img{
+  height: 2rem;
+}
+
+.img-text p{
+  margin: 0;
+}

@@ -12,7 +12,6 @@ export default function Header(){
             <div class="link"><a  href="#barberos">Barberos</a></div>
             <div class="link"><a  href="#horarios">Horarios</a></div>
             <div class="link"><a  href="#reserva">Reserva</a></div>
-            <div class="link"><a  href="#contacto">Contacto</a></div>
             <div class="link"><a  href="#registro">Registro</a></div>
             <div class="link"><a  href="#login">Login</a></div>
             
