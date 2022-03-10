@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import Axios from "../helpers/axios"
-
+import tokenAuth from "../helpers/tokenAuth"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -105,6 +105,24 @@ export const register = createAsyncThunk(
   }
 );
 
+export const tokenValidate = createAsyncThunk(
+  "auth/token",
+  async (userData, { rejectWithValue }) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      tokenAuth(token)
+    }
+
+    try {
+      const response = await Axios("auth/renew");
+      console.log(response)
+      return (response.data)
+    } catch (error) {
+      return rejectWithValue(error.response.data.msg)
+    }
+  }
+);
+
 
 const initialState = {
     user:{},
@@ -120,18 +138,10 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+    authLogout: (state, action) => {
+      state.user = {};
+      localStorage.removeItem('token');
+      state.isAuth = null;
     },
   },
   extraReducers: {
@@ -156,10 +166,21 @@ export const authSlice = createSlice({
       console.log("Rejected!");
       return { ...state, error: payload, loading: false, };
     },
+    [tokenValidate.pending]: (state) => {
+      return{...state, loading: true}
+    },
+    [tokenValidate.fulfilled]: (state, { payload }) => {
+  
+      return { ...state, user: payload, loading: false,  isAuth: true, message:payload.msg};
+    },
+    [tokenValidate.rejected]: (state, { payload }) => {
+  
+      return { ...state, error: payload, loading: false, };
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } =  authSlice.actions
+export const {authLogout } =  authSlice.actions
 
 export default  authSlice.reducer

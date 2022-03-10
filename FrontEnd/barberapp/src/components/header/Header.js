@@ -22,12 +22,19 @@ import {
   FaUserCircle
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { authLogout } from '../../reducers/authReducer'
+
 
 const Header = () => {
+  const dispatch = useDispatch();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const isAuthe = useSelector((state) => state.Auth.isAuth);
   const {name} = useSelector((state) => state.Auth.user);
+
+  const handleLogOut = () => {
+    dispatch(authLogout());
+  } ;
 
 
   return (
@@ -89,8 +96,8 @@ const Header = () => {
                     </MenuItemLink>
                   </MenuItem>
                   <MenuItem>
-                    <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                      <div>
+                    <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}    >
+                      <div onClick={handleLogOut}>
                    <FaRegWindowClose/>
                         SALIR
                       </div>
