@@ -6,5 +6,4 @@ APP de Turnos para Peluqueria/Barberia
 Integrantes:
 Fidel Parabacuto
 Jose Sierra
-Lucas Bettera
 Augusto Santiago Mauro
