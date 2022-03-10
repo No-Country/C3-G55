@@ -44,22 +44,7 @@ a {
   text-transform: uppercase;
 }
 
-@media (-webkit-min-device-pixel-ratio:0) {
-  a {
-    background-color: #fff;
-    background-image: -webkit-linear-gradient(left, #FFBD00 0%, #FF1F00 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 300% 300%;
-    color: transparent;
-    -webkit-transition: .3s .1s;
-    -webkit-background-clip: text;
-  }
-  a:hover {
-    background-position: 0 0;
-    color: transparent;
-    transition: .4s 0;
-  }
-}
+
 
 /*SECTION BARBEROS*/
 

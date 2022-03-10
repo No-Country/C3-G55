@@ -4,7 +4,7 @@ export const TituloReserva = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  max-width: 100%;
   padding-top: 6rem;
   h2 {
     letter-spacing: 2px;
@@ -16,7 +16,7 @@ export const ReservaContainerStyled = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1rem;
 `;

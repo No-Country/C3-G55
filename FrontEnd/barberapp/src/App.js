@@ -7,7 +7,7 @@ import Header from './components/header/Header';
 import Date from './screens/Date';
 import Footer from './components/footer/footer';
 import Reserva from './components/reserva/reserva';
-
+import '../src/components/assets/styles/styles.css';
 
 
 function App() {
