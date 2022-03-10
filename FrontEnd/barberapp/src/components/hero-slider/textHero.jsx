@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   TextHeroContainer,
   TextContent,
@@ -20,7 +21,10 @@ const TextHero = () => {
           hombre. Somos una barbería para caballeros
         </TextTertiary>
       </TextContent>
-      <Button>RESERVA</Button>
+      <Button>
+        {" "}
+        <Link to="/Reserva"> RESERVA</Link>
+      </Button>
     </TextHeroContainer>
   );
 };

@@ -6,6 +6,7 @@ import Home from './screens/home';
 import Header from './components/header/Header';
 import Date from './screens/Date';
 import Footer from './components/footer/footer';
+import Reserva from './components/reserva/reserva';
 
 
 
@@ -18,7 +19,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registro" element={<Register />} />
-          <Route path="/Date" element={<Date/>} />          
+          <Route path="/Date" element={<Date />} />
+          <Route path="/Reserva" element={<Reserva />} />
+          
         </Routes>     
 
       </BrowserRouter>
