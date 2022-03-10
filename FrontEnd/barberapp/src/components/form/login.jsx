@@ -19,7 +19,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthe) {
-      navigate("/Date");
+      navigate("/Reserva");
     }
   }, [isAuthe]);
 
