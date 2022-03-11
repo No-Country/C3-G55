@@ -12,5 +12,5 @@ Fidel Parabacuto: FrontEnd.
 Jose Sierra: BackEnd.
 Augusto Santiago Mauro: Estilos y Responsive.
 
-
+Deploy: https://romantic-bose-d04bf2.netlify.app/
 
