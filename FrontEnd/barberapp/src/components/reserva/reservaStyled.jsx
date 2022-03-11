@@ -22,6 +22,13 @@ font-family: 'Bebas Neue', sans-serif;
   margin: 2rem auto;
   padding: 1rem;
 `;
+export const CalendarContainerStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 100%;
+`;
 export const ServiciosContainer = styled.div`
   width: 280px;
   display: flex;

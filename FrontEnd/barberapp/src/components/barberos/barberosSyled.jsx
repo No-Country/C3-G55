@@ -21,6 +21,7 @@ export const CardContainer = styled.div`
     -webkit-filter: grayscale(1);
     filter: grayscale(100%);
     filter: gray;
+    transition: 1s ease-in-out;
   }
   img:hover {
     -webkit-filter: grayscale(0);
