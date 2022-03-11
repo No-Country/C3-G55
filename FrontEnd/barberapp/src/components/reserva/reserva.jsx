@@ -1,5 +1,6 @@
-import React from "react";
-import Calendar from "../calendar/calendar";
+import React, { useEffect, useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import {
   BarberoContainer,
   Horarios,
@@ -10,6 +11,7 @@ import {
   Servicios,
   ServiciosContainer,
   TituloReserva,
+  CalendarContainerStyled,
 } from "./reservaStyled";
 
 const Reserva = () => {
@@ -60,7 +62,45 @@ const Reserva = () => {
     "20:00",
     "20:30",
   ];
+  const [value, onChange] = useState(new Date());
+  const [service, setService] = useState();
+  const [hour, setHour] = useState();
+  const [barber, setBarber] = useState();
+  const [values, setValues] = useState({
+    date: "",
+    servicio: "",
+    hora: "",
+    barbero: "",
+  });
 
+  const getService = (item) => {
+    setService(item.target.innerText);
+  };
+
+  const getHour = (item) => {
+    setHour(item.target.innerText);
+  };
+  const getBarber = (item) => {
+    setBarber(item.target.innerText);
+  };
+
+  const getData = () => {
+    setValues({
+      date: value.toLocaleDateString(),
+      servicio: service,
+      hora: hour,
+      barbero: barber,
+    });
+    setTimeout(() => {
+      setValues({
+        date: "",
+        servicio: "",
+        hora: "",
+        barbero: "",
+      });
+    }, 5000);
+  };
+  console.log(values);
   return (
     <div>
       <TituloReserva>
@@ -68,13 +108,15 @@ const Reserva = () => {
       </TituloReserva>
 
       <ReservaContainerStyled>
-        <div>
-          <Calendar />
-        </div>
+        <CalendarContainerStyled>
+          <div style={{ heigth: "auto" }}>
+            <Calendar onChange={onChange} value={value} />
+          </div>
+        </CalendarContainerStyled>
         <ServiciosContainer>
           {React.Children.toArray(
             servicios.map((elem) => {
-              return <Servicios>{elem}</Servicios>;
+              return <Servicios onClick={getService}>{elem}</Servicios>;
             })
           )}
         </ServiciosContainer>
@@ -83,7 +125,7 @@ const Reserva = () => {
             horario.map((elem) => {
               return (
                 <Horarios>
-                  <p>{elem} </p>
+                  <p onClick={getHour}>{elem} </p>
                 </Horarios>
               );
             })
@@ -94,8 +136,8 @@ const Reserva = () => {
             barberos.map((elem) => {
               return (
                 <BarberoContainer>
-                  <Imagen src={elem.foto} alt="" />
-                  <Nombre>{elem.nombre} </Nombre>
+                  <Imagen src={elem.foto} alt="barbero" />
+                  <Nombre onClick={getBarber}>{elem.nombre} </Nombre>
                 </BarberoContainer>
               );
             })
@@ -103,7 +145,9 @@ const Reserva = () => {
         </div>
       </ReservaContainerStyled>
       <div>
-        <button>Continuar</button>
+        <button className="button" onClick={getData}>
+          Finalizar
+        </button>
       </div>
     </div>
   );
