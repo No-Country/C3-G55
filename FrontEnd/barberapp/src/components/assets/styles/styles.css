@@ -72,12 +72,20 @@ button{
   margin-top: 2rem;
 }
 
+#horarios{
+  display: flex;
+  flex-direction: column;
+}
 #horario-data{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-size: 1.2rem;
+  gap: 1rem;
 }
 .Horarios h2{
   margin-top: 0;
+  padding-top: 3.2rem;
 }
 
 #contacto{
@@ -89,6 +97,11 @@ button{
   #contacto{
     align-items: unset;
   }
+}
+#data{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 #text{
   display: flex;
@@ -113,7 +126,6 @@ button{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    align-items: center ;
   }
 }
 
