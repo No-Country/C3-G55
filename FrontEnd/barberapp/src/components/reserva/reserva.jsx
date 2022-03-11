@@ -11,27 +11,28 @@ import {
   ServiciosContainer,
   TituloReserva,
 } from "./reservaStyled";
+import '../assets/styles/styles.css'
 
 const Reserva = () => {
-  const servicios = ["SERVICIO1", "SERVICIO2", "SERVICIO3", "SERVICIO4"];
+  const servicios = ["CORTE", "BARBA", "COLOR", "TIJERA"];
   const barberos = [
     {
-      nombre: "nombre1",
+      nombre: "NOMBRE1",
       foto: "https://i.imgur.com/kk6MdVT.png",
       servicios: "barba",
     },
     {
-      nombre: "nombre2",
+      nombre: "NOMBRE2",
       foto: "https://i.imgur.com/0CH10Ly.png",
       servicios: "corte",
     },
     {
-      nombre: "nombre3",
+      nombre: "NOMBRE3",
       foto: "https://i.imgur.com/BUiY3sn.png",
       servicios: "coloración",
     },
     {
-      nombre: "nombre4",
+      nombre: "NOMBRE4",
       foto: "https://i.imgur.com/LVC1ib3.png",
       servicios: "corte",
     },
@@ -102,8 +103,8 @@ const Reserva = () => {
           )}
         </div>
       </ReservaContainerStyled>
-      <div>
-        <button>Continuar</button>
+      <div id="btn-finalizar">
+        <button><p>FINALIZAR</p></button>
       </div>
     </div>
   );
