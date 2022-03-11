@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import {
@@ -15,26 +15,36 @@ import {
 } from "./reservaStyled";
 import "../assets/styles/styles.css";
 
+
+import { useDispatch } from "react-redux";
+import { newDate } from "../../reducers/dateReducer";
+import { useNavigate } from 'react-router-dom';
+
+
 const Reserva = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+
   const servicios = ["CORTE", "BARBA", "COLOR", "TIJERA"];
   const barberos = [
     {
-      nombre: "NOMBRE1",
+      nombre: "Jesus",
       foto: "https://i.imgur.com/kk6MdVT.png",
       servicios: "barba",
     },
     {
-      nombre: "NOMBRE2",
+      nombre: "Santiago",
       foto: "https://i.imgur.com/0CH10Ly.png",
       servicios: "corte",
     },
     {
-      nombre: "NOMBRE3",
+      nombre: "Fidel",
       foto: "https://i.imgur.com/BUiY3sn.png",
       servicios: "coloración",
     },
     {
-      nombre: "NOMBRE4",
+      nombre: "Jose",
       foto: "https://i.imgur.com/LVC1ib3.png",
       servicios: "corte",
     },
@@ -68,7 +78,7 @@ const Reserva = () => {
   const [hour, setHour] = useState();
   const [barber, setBarber] = useState();
   const [values, setValues] = useState({
-    date: "",
+    date:"",
     servicio: "",
     hora: "",
     barbero: "",
@@ -85,6 +95,7 @@ const Reserva = () => {
     setBarber(item.target.innerText);
   };
 
+
   const getData = () => {
     setValues({
       date: value.toLocaleDateString(),
@@ -92,16 +103,15 @@ const Reserva = () => {
       hora: hour,
       barbero: barber,
     });
-    setTimeout(() => {
-      setValues({
-        date: "",
-        servicio: "",
-        hora: "",
-        barbero: "",
-      });
-    }, 5000);
-  };
-  console.log(values);
+  } ;
+
+
+    const handleSubmitForm = (e) => {
+      e.preventDefault();
+        dispatch(newDate(values))
+        navigate('/');
+    }
+
   return (
     <div>
       <TituloReserva>
@@ -109,6 +119,9 @@ const Reserva = () => {
       </TituloReserva>
 
       <ReservaContainerStyled>
+        <form
+          onSubmit={handleSubmitForm}
+        >
         <CalendarContainerStyled>
           <div style={{ heigth: "auto" }}>
             <Calendar onChange={onChange} value={value} />
@@ -144,13 +157,16 @@ const Reserva = () => {
             })
           )}
         </div>
-      </ReservaContainerStyled>
-
-      <div id="btn-finalizar">
+        <div id="btn-finalizar">
         <button className="button" onClick={getData}>
           <p>FINALIZAR</p>
         </button>
       </div>
+
+        </form>
+      </ReservaContainerStyled>
+
+     
     </div>
   );
 };

@@ -115,7 +115,6 @@ export const tokenValidate = createAsyncThunk(
 
     try {
       const response = await Axios("auth/renew");
-      console.log(response)
       return (response.data)
     } catch (error) {
       return rejectWithValue(error.response.data.msg)
