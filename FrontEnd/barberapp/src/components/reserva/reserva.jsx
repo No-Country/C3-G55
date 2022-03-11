@@ -13,7 +13,7 @@ import {
   TituloReserva,
   CalendarContainerStyled,
 } from "./reservaStyled";
-import '../assets/styles/styles.css'
+import "../assets/styles/styles.css";
 
 
 import { useDispatch } from "react-redux";
@@ -158,7 +158,9 @@ const Reserva = () => {
           )}
         </div>
         <div id="btn-finalizar">
-        <button className="button" onClick={getData}><p>FINALIZAR</p></button>
+        <button className="button" onClick={getData}>
+          <p>FINALIZAR</p>
+        </button>
       </div>
 
         </form>
