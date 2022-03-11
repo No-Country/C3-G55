@@ -13,7 +13,7 @@ import {
   TituloReserva,
   CalendarContainerStyled,
 } from "./reservaStyled";
-import '../assets/styles/styles.css'
+import "../assets/styles/styles.css";
 
 const Reserva = () => {
   const servicios = ["CORTE", "BARBA", "COLOR", "TIJERA"];
@@ -147,7 +147,9 @@ const Reserva = () => {
       </ReservaContainerStyled>
 
       <div id="btn-finalizar">
-        <button className="button" onClick={getData}><p>FINALIZAR</p></button>
+        <button className="button" onClick={getData}>
+          <p>FINALIZAR</p>
+        </button>
       </div>
     </div>
   );
