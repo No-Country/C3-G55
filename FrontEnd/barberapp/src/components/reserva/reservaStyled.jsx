@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const TituloReserva = styled.div`
+font-family: 'Bebas Neue', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,6 +13,7 @@ export const TituloReserva = styled.div`
 `;
 
 export const ReservaContainerStyled = styled.div`
+font-family: 'Bebas Neue', sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

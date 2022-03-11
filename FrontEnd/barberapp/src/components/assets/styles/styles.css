@@ -160,6 +160,7 @@ button{
 }
 
 #btn-finalizar{
+  font-family: 'Bebas Neue', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
