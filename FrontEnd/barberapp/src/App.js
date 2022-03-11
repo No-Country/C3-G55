@@ -1,3 +1,4 @@
+import React, {useEffect} from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './components/form/login';
@@ -8,9 +9,30 @@ import Date from './screens/Date';
 import Footer from './components/footer/footer';
 import Reserva from './components/reserva/reserva';
 import '../src/components/assets/styles/styles.css';
+import { useDispatch, useSelector } from 'react-redux';
+import {tokenValidate} from "./reducers/authReducer";
 
 
-function App() {
+
+
+const App = () => {
+  const dispatch = useDispatch();
+  const {isAuth, loading} = useSelector((state) => state.Auth);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token) {
+      dispatch(tokenValidate());
+    }
+  }, [dispatch])
+
+
+
+  if(loading){
+    return<h1>esperee</h1>
+  }
+
+
   return (
     <>
       <BrowserRouter>
