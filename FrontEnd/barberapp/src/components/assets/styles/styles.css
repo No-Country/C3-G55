@@ -72,12 +72,20 @@ h3{
   margin-top: 2rem;
 }
 
+#horarios{
+  display: flex;
+  flex-direction: column;
+}
 #horario-data{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-size: 1.2rem;
+  gap: 1rem;
 }
 .Horarios h2{
   margin-top: 0;
+  padding-top: 3.2rem;
 }
 
 #contacto{
@@ -89,6 +97,11 @@ h3{
   #contacto{
     align-items: unset;
   }
+}
+#data{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 #text{
   display: flex;
@@ -113,7 +126,6 @@ h3{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    align-items: center ;
   }
 }
 
@@ -145,4 +157,25 @@ h3{
 
 .img-text p{
   margin: 0;
+}
+
+#btn-finalizar{
+  font-family: 'Bebas Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#btn-finalizar button{
+  width: 10rem;
+  border: 1px solid grey;
+  background-color: #fff;
+  padding-top: 0;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+#btn-finalizar button:hover{
+  border: 1px solid orange;
+  background-color: orange;
+  color: #fff;
 }

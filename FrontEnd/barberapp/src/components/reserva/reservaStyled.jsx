@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const TituloReserva = styled.div`
+font-family: 'Bebas Neue', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,6 +13,7 @@ export const TituloReserva = styled.div`
 `;
 
 export const ReservaContainerStyled = styled.div`
+font-family: 'Bebas Neue', sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -37,8 +39,14 @@ export const ServiciosContainer = styled.div`
 export const Servicios = styled.p`
   padding: 1.3rem;
   margin: 0.5rem;
-  background-color: orange;
-  color: #fff;
+  border: 1px solid grey;
+  color: #000;
+  &:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid orange;
+  }
 `;
 export const HorariosContainer = styled.div`
   width: 400px;
@@ -50,8 +58,14 @@ export const HorariosContainer = styled.div`
 export const Horarios = styled.div`
   padding: 1rem;
   margin: 0.5rem;
-  background-color: orange;
-  color: #fff;
+  border: 1px solid grey;
+  color: #000;
+  &:hover{
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid orange;
+  }
 `;
 export const BarberoContainer = styled.div`
   display: flex;

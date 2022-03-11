@@ -27,7 +27,7 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  font-family: sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   p {
     &:nth-child(2) {
       color: #fff;
@@ -81,8 +81,8 @@ export const MenuItemLink = styled.a`
   height: 100%;
   padding: 0.5rem 2.5rem;
   color: #ffff;
-  font-family: sans-serif;
-  font-size: 1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
   font-weight: 300;
   cursor: pointer;
   text-decoration: none;

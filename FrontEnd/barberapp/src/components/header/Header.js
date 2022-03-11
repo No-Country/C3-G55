@@ -25,6 +25,7 @@ import { IconContext } from "react-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { authLogout } from '../../reducers/authReducer'
 
+
 const Header = () => {
   const dispatch = useDispatch();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
