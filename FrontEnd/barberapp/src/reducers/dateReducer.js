@@ -77,8 +77,7 @@ export const dateSlice = createSlice({
       return { ...state, dates: payload.turno, loading: false, message:payload.msg};
     },
     [newDate.rejected]: (state, { payload }) => {
- 
-      return { ...state, error: payload, loading: false, };
+      return { ...state, error: payload, loading: false, message:payload.msg };
     },
   },
 })
